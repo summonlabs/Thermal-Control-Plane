@@ -1,0 +1,16 @@
+# Thermal Control Plane line-ending policy.
+# Every text file is stored with LF in the repository, so content is
+# byte-identical on every platform and patches never depend on the checkout
+# configuration.
+* text=auto eol=lf
+
+# Windows batch files must keep their native line endings.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary artefacts are never subjected to line-ending conversion.
+*.bin binary
+*.lib binary
+*.dll binary
+*.exe binary
+*.png binary

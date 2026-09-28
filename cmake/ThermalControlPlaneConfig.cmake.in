@@ -1,0 +1,12 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+if(NOT TARGET ThermalControlPlane::ThermalControlPlane)
+    include("${CMAKE_CURRENT_LIST_DIR}/ThermalControlPlaneTargets.cmake")
+endif()
+
+check_required_components(ThermalControlPlane)
+
+set(ThermalControlPlane_VERSION "@PROJECT_VERSION@")
+set(ThermalControlPlane_FOUND TRUE)
